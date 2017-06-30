@@ -90,10 +90,11 @@ class VtexCommand(sublime_plugin.EventListener):
 	        { "trigger": "<vtex_amountItemsInCart\t Department-Category", "contents": "<vtex.cmc:AmountItemsInCart/>" }
 	    ]
 
-	    completions = []
-	    for current in completionList:
-	    	tmp = [current["trigger"], current["contents"]]
-	    	completions.append(tmp)
+		completions = []
 
-	    completions.sort()
-	    return completions
+		for current in completionList:
+			tmp = [current["trigger"], current["contents"]]
+			completions.append(tmp)
+
+		completions.sort()
+		return completions
