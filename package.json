@@ -1,0 +1,19 @@
+{
+  "name": "vtex-tags",
+  "version": "1.0.0",
+  "description": "Vtex autocompletion for Sublime Text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rodrigonavarro23/vtex-tags.git"
+  },
+  "author": "Rodrigo Navarro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rodrigonavarro23/vtex-tags/issues"
+  },
+  "homepage": "https://github.com/Rodrigonavarro23/vtex-tags#readme"
+}
