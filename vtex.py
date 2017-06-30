@@ -15,7 +15,6 @@ class VtexCommand(sublime_plugin.EventListener):
 			return None;
 
 		completions = []
-		html_file = 'completions.json'
 		file_name, file_extension = os.path.splitext(current_file)
 		html_extensions = [
 			'.html',
@@ -24,13 +23,11 @@ class VtexCommand(sublime_plugin.EventListener):
 		]
 
 		if file_extension in html_extensions:
-			return (self.getCompletions(html_file))
+			return (self.getCompletions())
 		else:
 			return None
 
 	def getCompletions(self, file):
-		# with open(file) as json_data:
-		#     completionList = json.load(json_data)["completions"]
 		completionList = [
 	        { "trigger": "<vtex_html", "contents": "<!DOCTYPE html>\n<html xmlns='http://www.w3.org/1999/xhtml' xmlns:vtex='http://www.vtex.com.br/2009/vtex-common' xmlns:vtex.cmc='http://www.vtex.com.br/2009/vtex-commerce' lang='en-us'>\n<head></head>\n<body></body>\n</html>" },
 	        { "trigger": "<vtex_breadcrumb", "contents": "<vtex.cmc:breadCrumb />" },
@@ -92,6 +89,7 @@ class VtexCommand(sublime_plugin.EventListener):
 	        { "trigger": "<vtex_miniCart\t Department-Category", "contents": "<vtex.cmc:miniCart/>" },
 	        { "trigger": "<vtex_amountItemsInCart\t Department-Category", "contents": "<vtex.cmc:AmountItemsInCart/>" }
 	    ]
+
 	    completions = []
 	    for current in completionList:
 	    	tmp = [current["trigger"], current["contents"]]
