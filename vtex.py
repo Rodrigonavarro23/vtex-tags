@@ -27,7 +27,7 @@ class VtexCommand(sublime_plugin.EventListener):
 		else:
 			return None
 
-	def getCompletions(self, file):
+	def getCompletions(self):
 		completionList = [
 	        { "trigger": "<vtex_html", "contents": "<!DOCTYPE html>\n<html xmlns='http://www.w3.org/1999/xhtml' xmlns:vtex='http://www.vtex.com.br/2009/vtex-common' xmlns:vtex.cmc='http://www.vtex.com.br/2009/vtex-commerce' lang='en-us'>\n<head></head>\n<body></body>\n</html>" },
 	        { "trigger": "<vtex_breadcrumb", "contents": "<vtex.cmc:breadCrumb />" },
