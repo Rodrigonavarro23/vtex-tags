@@ -11,14 +11,18 @@ import os
 class VtexCommand(sublime_plugin.EventListener):
 	def on_query_completions(self, view, prefix, locations):
 		current_file = view.file_name()
+		if current_file is None:
+			return None;
+
 		completions = []
-		html_file = os.path.dirname(__file__) + '/completions.json'
+		html_file = 'completions.json'
 		file_name, file_extension = os.path.splitext(current_file)
 		html_extensions = [
 			'.html',
 			'.hbs',
 			'.jsx'
 		]
+
 		if file_extension in html_extensions:
 			return (self.getCompletions(html_file))
 		else:
