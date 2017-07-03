@@ -30,6 +30,7 @@ class VtexCommand(sublime_plugin.EventListener):
 	def getCompletions(self):
 		completionList = [
 	        { "trigger": "<vtex_html", "contents": "<!DOCTYPE html>\n<html xmlns='http://www.w3.org/1999/xhtml' xmlns:vtex='http://www.vtex.com.br/2009/vtex-common' xmlns:vtex.cmc='http://www.vtex.com.br/2009/vtex-commerce' lang='en-us'>\n<head></head>\n<body></body>\n</html>" },
+	        { "trigger": "<vtex_tamplate", "contents": "<vtex:template id=\"\" />" },
 	        { "trigger": "<vtex_breadcrumb", "contents": "<vtex.cmc:breadCrumb />" },
 	        { "trigger": "<vtex_searchBox", "contents": "<vtex.cmc:fullTextSearchBox/>" },
 	        { "trigger": "<vtex_navigationHistory", "contents": "<vtex.cmc:navigationHistory/>" },
