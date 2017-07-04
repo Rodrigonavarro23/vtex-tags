@@ -12,7 +12,6 @@ Sublime Vtex Tags can be installed:
 
 Just start typing with an opening tag '<' in some of this file types:
 - Html
-- Hbs
 - Jsx
 
 > Hope this be useful for you ;)
